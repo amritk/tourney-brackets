@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box; }
+
+.container {
+  width: 800px;
+  height: 600px;
+  flex-direction: row;
+  display: flex; }
+
+.spacer {
+  opacity: 0; }
+
+.games div {
+  width: 125px;
+  border: 1px solid #000;
+  margin: 10px 0;
+  background: #73789F;
+  color: white;
+  padding: 10px 10px 10px 20px; }
+
+.games.depth-1 div {
+  margin-top: 65px; }
+  .games.depth-1 div:first-child {
+    margin-top: 37px; }
+
+.games.depth-2 div {
+  margin-top: 90px; }
+
+.games.depth-3.if-neccessary div {
+  margin-top: 90px; }
+
+.connecter {
+  width: 30px; }
+  .connecter div {
+    border: 1px solid #000;
+    border-left: none;
+    width: 100%; }
+  .connecter.depth-0 div {
+    height: 50px;
+    margin: 80px 0 0 1px; }
+    .connecter.depth-0 div:first-child {
+      margin: 32px 0 0 1px; }
+    .connecter.depth-0 div.connecter-spacer {
+      height: 25px;
+      border-top: 0; }
+  .connecter.depth-1 div {
+    margin-top: 133px;
+    height: 107px; }
+    .connecter.depth-1 div:first-child {
+      margin-top: 57px; }
+  .connecter.depth-2 div {
+    margin-top: 125px;
+    height: 270px; }
+  .connecter.depth-3.if-neccessary div {
+    height: 0px;
+    margin-top: 110px;
+    border-top: 1px dashed black;
+    border-bottom: 0; }
+
+.lines {
+  width: 30px; }
+  .lines div {
+    border-top: 1px solid #000; }
+  .lines.depth-0 div {
+    margin: 107px 0 0 1px; }
+    .lines.depth-0 div:first-child {
+      margin-top: 55px; }
+  .lines.depth-1 div {
+    margin-top: 270px; }
+    .lines.depth-1 div:first-child {
+      margin-top: 110px; }
+  .lines.depth-2 div {
+    margin-top: 110px; }
+  .lines.depth-3.if-neccessary div {
+    height: 0px;
+    margin-top: 110px;
+    border-top: 1px dashed black;
+    border-bottom: 0; }
