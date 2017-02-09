@@ -4,7 +4,6 @@
 
 .container {
     width: 800px;
-    height: 600px;
     flex-direction: row;
     display: flex;
 }
@@ -24,7 +23,7 @@
     }
     &.depth-1 {
         div {
-            margin-top: 65px;
+            margin-top: 61px;
             &:first-child {
                 margin-top: 37px;
             }
@@ -32,10 +31,16 @@
     }
     &.depth-2 {
         div {
-            margin-top: 90px;
+            margin-top: 170px;
+            &:first-of-type {
+                margin-top: 90px;
+            }
         }
     }
     &.depth-3 {
+        div {
+            margin-top: 185px;
+        }
         &.if-neccessary {
             div {
                 margin-top: 90px;
@@ -54,22 +59,70 @@
     &.depth-0 {
         div {
             height: 50px;
-            margin: 80px 0 0 1px;
+            margin: 50px 0 0 1px;
             &:first-child {
                 margin: 32px 0 0 1px;
             }
-            &.connecter-spacer {
-                height: 25px;
+            &.bottom-half {
+                position: relative;
                 border-top: 0;
+                &:after {
+                    content: "";
+                    background-color: white;
+                    position: absolute;
+                    top: -2px;
+                    right: -1px;
+                    height: 50%;
+                    width: 100%;
+                }
+            }
+            &.top-half {
+                position: relative;
+                border-bottom: 0;
+                &:after {
+                    content: "";
+                    background-color: white;
+                    position: absolute;
+                    bottom: 0;
+                    right: -1px;
+                    height: calc(50% + 1px);
+                    width: 100%;
+                }
             }
         }
     }
     &.depth-1 {
         div {
-            margin-top: 133px;
+            margin-top: 103px;
             height: 107px;
             &:first-child {
                 margin-top: 57px;
+            }
+            &.bottom-half {
+                position: relative;
+                border-top: 0;
+                &:after {
+                    content: "";
+                    background-color: white;
+                    position: absolute;
+                    top: -2px;
+                    right: -1px;
+                    height: 50%;
+                    width: 100%;
+                }
+            }
+            &.top-half {
+                position: relative;
+                border-bottom: 0;
+                &:after {
+                    content: "";
+                    background-color: white;
+                    position: absolute;
+                    bottom: 0;
+                    right: -1px;
+                    height: calc(50% - 1px);
+                    width: 100%;
+                }
             }
         }
     }
@@ -80,6 +133,10 @@
         }
     }
     &.depth-3 {
+        div {
+            height: 215px;
+            margin-top: 108px;
+        }
         &.if-neccessary {
             div {
                 height: 0px;
@@ -98,7 +155,7 @@
     }
     &.depth-0 {
         div {
-            margin: 107px 0 0 1px;
+            margin: 100px 0 0 1px;
             &:first-child {
                 margin-top: 55px;
             }
@@ -106,7 +163,7 @@
     }
     &.depth-1 {
         div {
-            margin-top: 270px;
+            margin-top: 210px;
             &:first-child {
                 margin-top: 110px;
             }
@@ -118,6 +175,9 @@
         }
     }
     &.depth-3 {
+        div {
+            margin-top: 208px;
+        }
         &.if-neccessary {
             div {
                 height: 0px;
